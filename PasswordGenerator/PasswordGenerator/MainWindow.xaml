@@ -1,0 +1,37 @@
+﻿<Window x:Class="PasswordGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordGenerator"
+        mc:Ignorable="d"
+        Title="Вход в систему" Height="390" Width="442">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Регистрация">
+                <Grid Background="#FFFFFFFF">
+                    <Label Content="Регистрация" HorizontalAlignment="Left" Margin="131,24,0,0" VerticalAlignment="Top" FontSize="24"/>
+                    <TextBox HorizontalAlignment="Left" Margin="121,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Name="login" FontSize="14" TextChanged="login_TextChanged"/>
+                    <Label Content="Логин" HorizontalAlignment="Left" Margin="38,105,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label Content="Пароль" HorizontalAlignment="Left" Margin="38,199,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label Name="generatedPassword" HorizontalAlignment="Left" Margin="117,200,0,0" VerticalAlignment="Top" Width="174" Height="26"/>
+                    <Label Name="isLoginFree"  HorizontalAlignment="Left" Margin="303,105,0,0" VerticalAlignment="Top" IsEnabled="False" FontSize="14" Foreground="#FF1FD438" Width="115" Height="25"/>
+                    <Button Name="generate" Content="Сгенерировать пароль" HorizontalAlignment="Left" Margin="121,144,0,0" VerticalAlignment="Top" Width="167" Height="36" Click="generate_Click" IsEnabled="False"/>
+                    <Button Name="registration" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="121,248,0,0" VerticalAlignment="Top" Height="39" Width="167" Click="Button_Click" IsEnabled="False"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Авторизация">
+                <Grid Background="#FFFFFFFF">
+                    <Label Name="Label1" Content="Авторизация"  HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Normal"/>
+                    <TextBox Name="InputLogin" HorizontalAlignment="Center" Margin="0,96,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Height="30" FontSize="14" TextChanged="InputLogin_TextChanged"/>
+                    <PasswordBox Name="InputPassword" HorizontalAlignment="Center" Margin="0,165,0,0" VerticalAlignment="Top" Width="211" Height="30" FontSize="14" PasswordChanged="InputPassword_PasswordChanged"/>
+                    <Label Name="Label2" Content="Логин" HorizontalAlignment="Left" Margin="38,97,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="14"/>
+                    <Label Name="Label3" Content="Пароль" HorizontalAlignment="Left" Margin="29,166,0,0" VerticalAlignment="Top" FontWeight="Normal" FontSize="14"/>
+                    <Button Name="Button1" FontWeight="Normal" Content="Войти" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top" Height="37" Width="56" Click="Button1_Click"  FontSize="14"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
